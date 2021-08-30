@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* button */ 
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #009FF9;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: fit-content;
+  overflow: hidden;
+  transition: ease-in-out 0.3s;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: #009FF9;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  transition: ease-in-out 0.3s;
+}
+
+#arrow {
+  position: relative;
+  display: inline-block;
+  clip-path: polygon(60% 0, 60% 45%, 100% 45%, 100% 55%, 60% 55%, 60% 100%, 0% 50%);
+  width: 15px;
+  height: 10px;
+  background-color: white;
+  z-index: 2;
+  transition: ease-in-out 0.3s;
+}
+
+.btn a{
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  z-index: 2;
+  transition: ease-in-out 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  box-shadow:inset 0px 0px 0px 1px #009FF9;
+}
+
+.btn:hover #arrow {
+  background-color: #009FF9;
+}
+
+.btn:hover.btn::before {
+  width: 0;
+}
+
+.btn a:hover {
+  color: #009FF9;
+}
+/* finished animation button */
+
+header {
+  position: fixed;
+  background: linear-gradient(96.59deg, #0500EC 0.51%, #AD00FF 97.71%);
+  padding: 15px 40px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .btn {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header h1 {
+  font-weight: normal;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 80px 20px 0;
+}
+
+.text-side{
+  width: 40%;
+}
+
+.text-side h2 {
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+.text-side p {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.image-side {
+  max-width: 200px;
+  display: block;
+  border-radius: 25px;
+  filter: drop-shadow(0px 4px 5px rgba(90, 16, 16, 0.25));
+  overflow: hidden;
+}
+
+.image-side img {
+  width: 100%;
+}
+
+#arrow-frame {
+  margin: 40px 0;
+}
+
+#arrow-frame div {
+  width: fit-content;
+  margin: 20px auto;
+  background: radial-gradient(180.83% 180.83% at 47.5% -52.5%, #A004FE 53.12%, #0702EC 100%);
+  padding: 20px;
+  border-radius: 50%;
+}
+
+#arrow-frame div svg {
+  display: block;
+}
+
+.template img{
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    justify-content: space-between;
+  }
+
+  header h1 {
+    text-align: right;
+    font-size: 20px;
+  }
+  
+  .text-side{
+    width: 60%;
+  }
+}
+
+@media (max-width: 500px) {
+  .text-side {
+    width: 100%;
+  }
+
+  .image-side{
+    display: none;
+  }
+}
+

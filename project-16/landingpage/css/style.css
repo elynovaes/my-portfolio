@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 150%;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 22px;
+}
+
+.btn {
+  background: url(../images/bg-border-btn.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 124px;
+}
+
+.btn a {
+  display: block;
+  margin-left: 4px;
+  text-decoration: none;
+  color: white;
+  padding: 10px 17px;
+}
+
+.btn-bgFill {
+  background: url(../images/bg-fill-btn.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 310px;
+  height: 80px;
+}
+
+.btn-bgFill a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  font-size: 24px;
+}
+
+.btn-bgFill a svg {
+  width: 70px;
+}
+
+.btn:hover, .btn-bgFill:hover, .btn-introduction:hover {
+  transform: scale(1.1);
+  transition: transform ease-in-out 0.3s;
+}
+
+header {
+  background-image: url(../images/bg-header.jpg);
+  background-position-x: center;
+  padding: 50px 10px;
+}
+
+/* nav */
+nav {
+  padding: 10px 60px;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #906800;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.212);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 4vw;
+  z-index: 100000000000000000 !important;
+  list-style: none;
+
+}
+
+#menu a {
+  color: #3b455a;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 25px;
+}
+
+#menu a:hover {
+  background-color: #FFC93E;
+  transition: background-color ease-in-out 0.3s;
+}
+
+#menu .btn {
+  color: white;
+  font-weight: bold;
+}
+
+header section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.update {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  clip-path: polygon(0 0, 100% 0, 100% 71%, 77% 100%, 0 100%);
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 567px;
+  z-index: 2;
+  overflow: visible;
+}
+
+.update::before {
+  content: "";
+  width: 563px;
+  height: 290px;
+  clip-path: polygon(0 0, 100% 0, 100% 71%, 77% 100%, 0 100%);
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  top: 2px;
+  left: 2px;
+}
+
+.update h2 {
+  margin-bottom: 18px;
+}
+
+.update p {
+  margin-bottom: 28px;
+  line-height: 28px;
+}
+
+#quick-start {
+  position: relative;
+  background: rgba(100, 72, 0, 0.68);
+  border: 3px solid rgba(255, 255, 255, 0.507);
+  max-width: 96.5%;
+  padding: 30px 40px;
+  margin: 100px auto 80px  ;
+  color: white;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.text {
+  position: relative;
+  z-index: 100;
+}
+
+.text ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
+  font-size: 24px;
+  max-width: 670px;
+  margin: 28px 0 42px;
+}
+
+.text a {
+  color: white;
+}
+
+.box-btn {
+  position: relative;
+  z-index: 20000000;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 40px;
+  z-index: 10000;
+}
+
+.img-quick-start {
+  clip-path: polygon(55% 0, 100% 0, 100% 100%, 0 100%);
+  width: 600px;
+  height: 800px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.img-quick-start img {
+  display: block;
+  z-index: 0;
+}
+
+/* --------------------------------------- */
+
+.introduction {
+  position: relative;
+  background: black;
+  color: white;
+  padding: 40px;
+  z-index: 1;
+}
+
+.vector-left {
+  width: 30%;
+  border: 7px solid #FFC93E;
+  border-right: 0px solid transparent;
+  height: calc(100% - 60px);
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.vector-right {
+  width: 30%;
+  border: 7px solid #FFC93E;
+  border-left: 0px solid transparent;
+  height: calc(100% - 60px);
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  padding: 0 60px;
+}
+
+.title {
+  position: relative;
+  margin-bottom: 45px;
+  margin-top: 35px;
+  padding-top: 10px;
+}
+
+.title::before {
+  content: "";
+  width: 200px;
+  height: 7px;
+  background: white;
+  position: absolute;
+  transform: translateX(-10px);
+  top: 0;
+}
+
+.content-text {
+  max-width: 900px;
+  margin: auto;
+}
+
+.content-text-ul {
+  max-width: 830px;
+  margin: auto;
+  list-style: none;
+}
+
+.content-text-ul li {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.btn-introduction {
+  width: 200px;
+}
+
+.btn-introduction a {
+  font-size: 18px;
+  height: fit-content;
+  padding: 15px;
+}
+
+.content h2 {
+  font-size: 24px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.content ul {
+  max-width: 900px;
+  margin: auto;
+}
+
+.content ul li {
+  font-weight: lighter;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* section why dungeons & dragons */
+.why-dungeons {
+  position: relative;
+  background-color: #906800;
+  padding: 80px 40px;
+  color: white;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+#box-why-dungeons {
+  clip-path: polygon(0 0, 100% 0, 100% 71%, 77% 100%, 0 100%);
+  position: relative;
+  background: hsla(0, 0%, 0%, 0.7);
+  width: 80%;
+  padding: 30px 40px;
+  margin: 0 auto 100px;
+  color: white;
+  overflow: hidden;
+}
+
+.text p {
+  font-size: 20px;
+  max-width: 35vw;
+  margin-top: 28px;
+}
+
+.img-why-dungeons {
+  width: 30vw;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.img-why-dungeons img {
+  display: block;
+}
+
+.p1 {
+  text-transform: uppercase;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.box-links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.link {
+  position: relative;
+  background-color: black;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%);
+  display: block;
+  z-index: 20;
+}
+
+.link img {
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%);
+  margin: 3px;
+  position: relative;
+  z-index: 20;
+}
+
+.p2 {
+  text-align: center;
+}
+
+.p3 {
+  margin: 30px auto 0;
+  max-width: 990px;
+}
+
+.p1, .p2, .p3, .why-dungeons ul {
+  font-weight: lighter;
+  line-height: 150%;
+}
+
+.why-dungeons ul {
+  max-width: 900px;
+  margin: auto;
+}
+
+.box-links.img {
+  margin: 40px 0;
+  gap: 60px;
+}
+
+.link.img {
+  background-color: #FFC93E;
+  width: auto;
+}
+
+.link.img img {
+  width: 150px;
+}
+
+/* started-set section */
+.started-set {
+  background-color: #906800;
+  padding: 40px 20px;
+}
+
+.ctn {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.ctn-img {
+  position: relative;
+  margin-top: 35px;
+}
+
+.ctn-img > img{
+  display: block;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  width: 400px;
+}
+
+.ctn-img .bg-img {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-20px, -20px);
+}
+
+.wrapper-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-80%, 50%);
+}
+
+.wrapper-icon img:last-child {
+  position: absolute;
+}
+
+.ctn-text {
+  max-width: 500px;
+  color: white;
+}
+
+.ctn-text .title {
+  margin-bottom: 20px;
+}
+
+.ctn-text .title h1 {
+  line-height: 120%;
+}
+
+/* D&D Maps section */
+.dd-maps {
+  background-color: #906800;
+  padding: 40px 20px;
+}
+
+.wrap-maps {
+  background-image: url(../images/map5.png);
+  background-size: cover;
+  padding: 80px;
+  width: 80vw;
+  margin: auto;
+  position: relative;
+}
+
+.wrap-maps::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.733);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.dd-maps .title {
+  margin-top: 0;
+  color: white;
+}
+
+.box-links-card {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.link-card {
+  position: relative;
+  width: fit-content;
+  text-align: center;
+  color: white;
+}
+
+.link-card p {
+  width: 250px;
+}
+
+.map-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.map-icon img:last-child {
+  position: absolute;
+}
+
+.ct-img {
+  margin-bottom: 10px;
+  border: 4px solid white;
+  overflow: hidden;
+  width: 250px;
+  height: 150px;
+}
+
+.ct-img img {
+  width: 120%;
+  transform: translate(-10%, -10%);
+}
+
+
+
+footer {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 30px;
+  padding: 20px;
+}
+
+footer a {
+  display: block;
+}
+
+footer a img {
+  width: 30px;
+}
+
+@media (max-width: 810px) {
+  .update {
+    background-color: rgba(0, 0, 0, 0.753);
+    max-width: 567px;
+  }
+  
+  .update::before {
+    display: none;
+  }
+
+  .box-btn {
+    justify-content: center;
+  }
+
+  .btn-bgFill {
+    background-size: cover;
+    width: 280px;
+    padding: 20px 5px;
+  }
+
+  .btn-bgFill span {
+    font-size: 20px;
+  }
+  
+  .img-quick-start {
+    width: 500px;
+  }
+
+  .img-quick-start::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.856);
+    width: 500px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .img-quick-start img {
+    height: 100%;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .btn-introduction {
+    height: 60px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .btn-introduction a {
+    padding: 20px;
+  }
+
+  /* why dungeons section */
+  .why-dungeons {
+    padding: 40px 10px;
+  }
+
+  #box-why-dungeons {
+    width: 100%;
+  }
+
+  .text p {
+    max-width: 60vw;
+  }
+
+  .why-dungeons ul {
+    width: 50vw;
+  }
+
+  .img-why-dungeons {
+    display: none;
+  }
+
+  /* started set section */
+  .started-set {
+    background-color: #906800;
+    padding: 40px 20px;
+  }
+  
+  .ctn-img > img{
+    width: 280px;
+  }
+  
+  /* D&D Maps section */
+  .dd-maps {
+    background-color: #906800;
+    padding: 40px 10px;
+  }
+  
+  .wrap-maps {
+    width: 100%;
+  }
+  
+  .dd-maps .title::before {
+    width: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  #quick-start {
+    padding: 20px;
+  }
+  
+  .vector-right, .vector-left {
+    display: none;
+  }
+
+  .content {
+    padding: 0;
+  }
+}

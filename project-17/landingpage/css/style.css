@@ -1,0 +1,230 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat';
+}
+
+h1 {
+  font-size: 56px;
+  font-weight:800;
+  line-height: 1.1;
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+}
+
+p {
+  color: #666666;
+  font-size: 26px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 30px;
+  max-width: 433px;
+  background: #FFD037;
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 22px;
+  margin: 0 auto;
+  transition: transform ease-in-out 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: transform ease-in-out 0.3s;
+}
+
+.btn a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 130%;
+  color: #FFFFFF;
+}
+
+/* section 1 */
+.sct1 {
+  padding: 40px 40px 100px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../images/image-bg-sct1.jpg);
+}
+
+.sct1 .text {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.sct1 .text p {
+  max-width: 900px;
+  font-size: 30px;
+  margin: 20px auto 54px;
+}
+
+/* section 2 */
+.sct2 {
+  padding: 70px 40px;
+  background-color: #F4F4F4;
+  text-align: center;
+}
+
+.sct2 h1 {
+  max-width: 622px;
+  margin-bottom: 50px;
+  line-height: 1;
+}
+
+.ctn {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.sct2 .ctn .card {
+  padding: 45px;
+  background-color: white;
+  box-shadow: 0px 0px 22px -5px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  max-width: 360px;
+}
+
+.sct2 .ctn .card h3 {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 130%;
+  color: #000347;
+}
+
+.sct2 .ctn .card i {
+  color: #030095;
+  font-size: 120px;
+  margin: 30px auto;
+}
+
+.sct2 > p {
+  line-height: 1.3;
+  max-width: 1145px;
+  margin: 40px auto 50px;
+}
+
+/* section 3 */
+
+.sct3 {
+  padding: 70px 40px;
+}
+
+.sct3 h1 {
+  line-height: 1;
+}
+
+.sct3 .ctn {
+  margin: 50px auto 90px;
+}
+
+.ctn .box {
+  background: #8F8F8F;
+  box-shadow: 0px 0px 22px -5px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  text-align: center;
+  padding: 30px 30px;
+  max-width: 530px;
+}
+
+.box i {
+  color: white;
+  font-size: 108px;
+}
+
+.box .comment {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 130%;
+  max-width: 411px;
+  margin: 20px auto;
+}
+
+.box p {
+  color: white;
+}
+
+.sct3 ul {
+  list-style: none;
+  max-width: 750px;
+  margin: auto;
+}
+
+.sct3 ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.sct3 ul li i {
+  font-size: 35px;
+  color: #159900;
+}
+
+.sct3 > p {
+  text-align: center;
+  margin: 70px auto 30px;
+  color: black;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+/* footer */
+footer {
+  padding: 40px;
+  background-color: #2B0085;
+  text-align: center;
+}
+
+footer p {
+  color: white;
+  font-size: 18px;
+}
+
+@media (max-width: 540px) {
+  h1 {
+    font-size: calc(5px + 10vw);
+  }
+
+  /* section 1 */
+  .sct1, .sct2, .sct3 {
+    padding: 30px 20px 50px; 
+  }
+
+  .sct1 .logo img {
+    display: block;
+    margin: auto;
+    width: calc(100px + 10vw);
+  }
+
+  .sct1 .text {
+    margin-top: 40px;
+  }
+
+  /* section 2 */
+  .sct2 .ctn .card {
+    padding: 20px;
+  }
+
+  .sct2 .ctn .card i, .box i {
+    font-size: calc(8px + 15vw);
+  }
+
+  /* section 3 */
+  .box .comment {
+    font-size: calc(5px + 10vw);
+  }
+}

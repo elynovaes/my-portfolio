@@ -1,0 +1,13 @@
+ :root {
+
+  /* text */
+  --headline-h1: 64px;
+  --headline-h1-mobile: 46px;
+  --title-h1: 48px;
+  --title-h1-mobile: 36px;
+  --title-description: 26px;
+  --Paragraph: 24px;
+  --Paragraph-mobile: 20px;
+  --List-Elements: 18px;
+
+ }

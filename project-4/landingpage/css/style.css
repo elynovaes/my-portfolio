@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Regular'), url('../fonts/Segoe\ UI.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold'), url('../fonts/Segoe\ UI\ Bold.woff') format('woff');
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI Regular', sans-serif;
+    line-height: 1.2;
+}
+
+h1{
+    font-family: 'Segoe UI Bold', sans-serif;
+    font-weight: normal;
+    font-size: 3rem;
+    color: #fff;
+    padding: .5rem 0;
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: #e4e4e4;
+    margin-bottom: 3rem;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+    background: url('../images/bg-img.jpg') no-repeat center center/cover;
+    position: relative;
+    padding: 45px 8vw 0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(27, 39, 72, 0.8);
+}
+
+.hero * {
+    z-index: 10;
+}
+.hero .content {
+    width: 50%;
+}
+
+/* Form */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    box-shadow: inset 4px 4px 4px rgba(255, 255, 255, 0.25), inset -4px -4px 4px rgba(255, 255, 255, 0.25);
+    background: rgba(5, 13, 18, 0.5);
+    backdrop-filter: blur(8px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 10px;
+}
+
+.form {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.signup-form .form-control {
+    width: 80%;
+    margin: .5rem auto;
+}
+
+label {
+    display: block;
+    font-size: 1.5rem;
+    color: #C7C7C7;
+    line-height: 130%;
+    text-align: left;
+    margin-top: 25px;
+}
+
+input {
+    width: 100%;
+    height: 39.26px;
+    background: #666666;
+    border: 2px solid #7C7C7C;
+    border-radius: 5px;
+    padding-bottom: .5rem;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.submitsAndHiddens {
+    width: 80%;
+    margin: 1.5rem auto;
+}
+
+.btn {
+    background: #54D028;
+    padding: 0;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #1B2748;
+    padding: 0.2em 0;
+}
+
+footer a {
+    display: block;
+    padding-top: .25rem;
+    text-align: center;
+    font-size: .6rem;
+    color: #C7C7C7;
+}
+
+footer p {
+    font-size: 1rem;
+    text-align: center;
+    color: #C7C7C7;
+    padding-top: .75rem;
+}
+
+/* Tablets and under */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .hero .content {
+        width: 100%;
+    }
+
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .signup-form {
+        width: 60%;
+        margin: 0 auto 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .signup-form {
+        width: 90%;
+    }
+
+    footer p {
+        font-size: .75rem;
+    }
+}

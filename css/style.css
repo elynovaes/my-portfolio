@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+  position: relative;
+  display: block;
+  background: #009FF9;
+  border-radius: 5px;
+  margin: 40px auto;
+  width: fit-content;
+  overflow: hidden;
+  transition: ease-in-out 0.3s;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: #009FF9;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  transition: ease-in-out 0.3s;
+}
+
+.btn a{
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 10px 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  z-index: 2;
+  transition: ease-in-out 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  box-shadow:inset 0px 0px 0px 1px #009FF9;
+}
+
+.btn:hover.btn::before {
+  width: 0;
+}
+
+.btn a:hover {
+  color: #009FF9;
+}
+
+header {
+  position: relative;
+  background: linear-gradient(96.59deg, #0500EC 0.51%, #AD00FF 97.71%);
+  padding: 80px 10px 240px;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  background: url(../image/Pattern-4.png);
+  background-size: cover;
+  background-position-x: center;
+  width: 100%;
+  height: 25%;
+  bottom: 0;
+  left: 0;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: url(../image/pattern-stock-header.png);
+  background-size: cover;
+  background-position-x: center;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+#content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  color: white;
+  text-align: center;
+  z-index: 3;
+}
+
+#content h1 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+#content {
+  font-size: 20px;
+  line-height: 150%;
+}
+
+/* ---------------------------- */
+main {
+  padding: 0 20px;
+  background: url(../image/bg-pattern.png);
+  background-attachment: fixed;
+  background-size: 100%;
+}
+
+.works {
+  margin: 40px auto;
+  width: fit-content;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.card {
+  max-width: 300px;
+  transition: ease-in-out 0.3s;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  border-radius: 25px;
+  filter: drop-shadow(0px 4px 5px rgba(90, 16, 16, 0.25));
+  transition: ease-in-out 0.2s;
+}
+
+.card img:hover {
+  transform: scale(1.04);
+}
+
+.card p {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.website {
+  margin-top: 100px;
+}
+
+.website .wrapper {
+  position: relative;
+  background: linear-gradient(96.59deg, #0500EC 0.51%, #AD00FF 97.71%);
+  border-radius: 20px;
+  padding: 45px 60px 10px;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.wrapper::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: url(../image/Pattern-4.png);
+  background-size: cover;
+  background-position-x: center;
+  width: 100%;
+  height: 20%;
+  top: 50%;
+  transform: translateY(-110%);
+  left: 0;
+}
+
+.wrapper::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: url(../image/Pattern-4.png);
+  background-size: cover;
+  background-position-x: center;
+  width: 100%;
+  height: 20%;
+  top: 45%;
+  left: 0;
+  transform: rotateZ(180deg);
+}
+
+.website .wrapper h2 {
+  position: relative;
+  z-index: 2;
+  font-weight: normal;
+  text-align: center;
+  color: white;
+}
+
+.site-of-pages {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 70%;
+  margin: 40px auto 0;
+}
+
+.page {
+  max-width: 100px;
+  border-radius: 15px;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.253));
+  overflow: hidden;
+}
+
+.page img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  background: linear-gradient(96.59deg, #0500EC 0.51%, #AD00FF 97.71%);
+  min-height: 40px;
+  width: 100%;
+  margin-top: 120px;
+}
+
+@media (max-width: 700px) {
+  header {
+    padding: 80px 10px 140px;
+  }
+  
+  header::before {
+    height: 15%;
+  }
+
+  .works {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .website .wrapper {
+    padding: 45px 10px 10px;
+  }
+
+  .site-of-pages {
+    width: 100%;
+  }
+}
+
+@media (max-width: 580px) {
+  .page:nth-child(4), .page:nth-child(5), .page:nth-child(6), .page:nth-child(7), .page:nth-child(8) {
+    display: none;
+    
+  } 
+}
+
+
+@media (max-width: 440px) {
+  .works {
+    grid-template-columns: 1fr;
+  }
+}
+
